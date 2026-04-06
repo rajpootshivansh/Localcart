@@ -5,13 +5,13 @@ function Logo({ dark = false }) {
   return (
     <div className="flex items-center gap-2">
       <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
-        <path d="M8 14h6l6 24h24l4-16H18" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        <line x1="22" y1="26" x2="42" y2="26" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="23" y1="32" x2="41" y2="32" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="24" cy="42" r="2.5" fill="white" />
-        <circle cx="38" cy="42" r="2.5" fill="white" />
+        <path d="M8 14h6l6 24h24l4-16H18" stroke="#dadada" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <line x1="22" y1="26" x2="42" y2="26" stroke="#dadada" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="23" y1="32" x2="41" y2="32" stroke="#dadada" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="24" cy="42" r="2.5" fill="#dadada" />
+        <circle cx="38" cy="42" r="2.5" fill="#dadada" />
         <circle cx="36" cy="13" r="5" fill="#4ade80" />
-        <circle cx="36" cy="13" r="2" fill="white" />
+        <circle cx="36" cy="13" r="2" fill="#dadada" />
         <path d="M36 18 L36 23" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" />
       </svg>
       <span className="text-2xl font-extrabold tracking-tight">
@@ -267,44 +267,7 @@ export default function LoginPage() {
           className="w-full max-w-sm rounded-xl overflow-hidden mb-6 shadow-sm"
           style={{ height: 170, background: "linear-gradient(135deg,#e0f2fe,#d1fae5)" }}
         >
-          <svg width="100%" height="100%" viewBox="0 0 420 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="420" height="170" fill="#f0fdf4" />
-            {[30, 70, 110].map((y, shelfIndex) => (
-              <g key={shelfIndex}>
-                <rect x="20" y={y + 28} width="380" height="6" rx="2" fill="#a7f3d0" />
-                {Array.from({ length: 14 }).map((_, itemIndex) => {
-                  const colors = [
-                    "#fbbf24",
-                    "#60a5fa",
-                    "#f87171",
-                    "#a78bfa",
-                    "#34d399",
-                    "#fb923c",
-                    "#e879f9",
-                    "#38bdf8",
-                  ];
-
-                  return (
-                    <rect
-                      key={itemIndex}
-                      x={22 + itemIndex * 27}
-                      y={y + 8}
-                      width={itemIndex % 3 === 0 ? 18 : 14}
-                      height={itemIndex % 3 === 0 ? 22 : 18}
-                      rx="2"
-                      fill={colors[(itemIndex + shelfIndex * 3) % colors.length]}
-                      opacity="0.85"
-                    />
-                  );
-                })}
-              </g>
-            ))}
-            <rect x="0" y="148" width="420" height="22" fill="#6ee7b7" />
-            <rect x="0" y="145" width="420" height="6" fill="#34d399" />
-            <rect x="30" y="130" width="30" height="18" rx="3" fill="#fbbf24" />
-            <rect x="70" y="126" width="22" height="22" rx="3" fill="#60a5fa" />
-            <rect x="100" y="132" width="18" height="16" rx="2" fill="#f87171" />
-          </svg>
+          <img src="https://www.shutterstock.com/image-photo/tangier-morocco-october-16th-2022-600w-2446260625.jpg" alt="" />
         </div>
 
         <div className="w-full max-w-sm">

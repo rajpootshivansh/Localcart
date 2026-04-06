@@ -15,7 +15,7 @@ export default function App() {
   return (
 
     
-    <HashRouter basename={import.meta.env.PROD ? '/localcart' : ''}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
