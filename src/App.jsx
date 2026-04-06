@@ -13,7 +13,7 @@ export default function App() {
   const [cartCount] = useState(2);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PROD ? '/localcart' : ''}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
