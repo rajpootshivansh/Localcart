@@ -11,8 +11,10 @@ import AdminDashboard from "./components/AdminDashboard";
 
 export default function App() {
   const [cartCount] = useState(2);
-
+  console.log("change test");
   return (
+
+    
     <HashRouter basename={import.meta.env.PROD ? '/localcart' : ''}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -28,5 +30,7 @@ export default function App() {
         
       </Routes>
     </HashRouter>
+
+    
   );
 }
