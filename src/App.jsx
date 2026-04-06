@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import LandingPage from "./components/LandingPage";
@@ -13,7 +13,7 @@ export default function App() {
   const [cartCount] = useState(2);
 
   return (
-    <BrowserRouter basename={import.meta.env.PROD ? '/localcart' : ''}>
+    <HashRouter basename={import.meta.env.PROD ? '/localcart' : ''}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -27,6 +27,6 @@ export default function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
